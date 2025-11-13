@@ -1,8 +1,10 @@
+
 import java.net.*;
 import java.io.*;
 import org.json.JSONObject;
 
 class ServerThread extends Thread {
+
     Socket client;
     BufferedReader inDalClient;
     DataOutputStream outVersoClient;
@@ -70,7 +72,8 @@ class ServerThread extends Thread {
                         }
                     }
 
-                    default -> risposta = "Tipo sensore non riconosciuto";
+                    default ->
+                        risposta = "Tipo sensore non riconosciuto";
                 }
 
                 outVersoClient.writeBytes(risposta + "\n");
@@ -90,6 +93,7 @@ class ServerThread extends Thread {
 }
 
 public class MultiServer {
+
     public void start() {
         try {
             ServerSocket serverSocket = new ServerSocket(6789);
