@@ -1,4 +1,3 @@
-package ContattoPorta;
 
 import java.io.*;
 import java.net.*;
@@ -33,7 +32,7 @@ class ContattoPorta {
 }
 
 // Classe client che comunica con il server
-public class Multiclient{
+public class MultiClient{
     String nomeServer = "localhost"; // indirizzo server locale
     int portaServer = 6789;          // porta del server
     Socket miosocket;
