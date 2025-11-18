@@ -12,7 +12,7 @@ class ServerThread extends Thread {
     public ServerThread(Socket socket) {
         this.client = socket;
     }
-
+    
     @Override
     public void run() {
         try {
@@ -21,6 +21,8 @@ class ServerThread extends Thread {
             e.printStackTrace(System.out);
         }
     }
+
+
 
     public void comunica() throws Exception {
         inDalClient = new BufferedReader(new InputStreamReader(client.getInputStream()));
