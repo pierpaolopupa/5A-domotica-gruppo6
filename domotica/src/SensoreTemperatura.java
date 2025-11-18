@@ -19,14 +19,15 @@ public class SensoreTemperatura {
             while (true) {
 
                 int id = random.nextInt(1000);
-                double valore = 20 + random.nextDouble() * 30;  // 20–50 °C
+                int temperatura = 20 + random.nextInt(31); // 20–50 °C
                 String zona = zone[random.nextInt(zone.length)];
                 String ora = LocalDateTime.now().toString();
 
+                // JSON compatibile col server
                 String json = "{"
                         + "\"id\":" + id + ","
                         + "\"tipo\":\"temperatura\","
-                        + "\"valore\":" + valore + ","
+                        + "\"temperatura\":" + temperatura + ","
                         + "\"zona\":\"" + zona + "\","
                         + "\"ora\":\"" + ora + "\""
                         + "}";
@@ -34,7 +35,7 @@ public class SensoreTemperatura {
                 out.println(json);
                 System.out.println("Inviato al server: " + json);
 
-                Thread.sleep(3000); // ogni 3 secondi
+                Thread.sleep(3000);
             }
 
         } catch (Exception e) {
