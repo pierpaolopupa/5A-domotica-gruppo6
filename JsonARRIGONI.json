@@ -1,7 +1,0 @@
-{
-    id: ,
-    tipo: contatto,
-    valore: true/false,
-    zona: ingresso | cucina | garage
-  }
-  
