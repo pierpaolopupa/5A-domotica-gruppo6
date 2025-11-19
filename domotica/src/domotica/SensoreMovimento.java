@@ -1,5 +1,7 @@
-import java.io.*;
-import java.net.*;
+package domotica;
+
+import java.io.PrintWriter;
+import java.net.Socket;
 import java.time.LocalDateTime;
 import java.util.Random;
 
