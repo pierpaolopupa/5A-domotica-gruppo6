@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class ContattoPortaAuto {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         try {
             Socket socket = new Socket("localhost", 6789);
 
